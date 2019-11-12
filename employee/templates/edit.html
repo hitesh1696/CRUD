@@ -1,10 +1,15 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Index</title>
-    {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+     {% load staticfiles %}
+    <link rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="type/css" href="{% static 'css/style.css' %}"/>
 </head>
 <body>
 <form method="POST" class="post-form" action="/update/{{employee.id}}">

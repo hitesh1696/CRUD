@@ -1,7 +1,7 @@
-body{
-    background-color: white;
-    background: white url("img/profile.jpg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: left top;
+body {
+	background: url('nature.jpg') no-repeat;
+	background-size: cover;
+	font-family: Roboto;
+    color: lightblue;
+
 }

@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Employee Records</title>
-     {% load staticfiles %}
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+ {% load staticfiles %}
+    <link rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="type/css" href="{% static 'css/style.css' %}"/>
+
 </head>
 <body>
 <table class="table table-striped table-bordered table-sm">
@@ -14,23 +20,36 @@
         <th>Employee Name</th>
         <th>Employee Email</th>
         <th>Employee Contact</th>
+        <th>Employee Gender</th>
+        <th>Employee Country</th>
+        <th>Employee State</th>
+        <th>Employee Language</th>
+        <th>Employee Image</th>
+
         <th>Actions</th>
     </tr>
     </thead>
-    <tbody>
-{% for employee in employees %}
-    <tr>
-        <td>{{ employee.eid }}</td>
-        <td>{{ employee.ename }}</td>
-        <td>{{ employee.eemail }}</td>
-        <td>{{ employee.econtact }}</td>
-        <td>
-            <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>
-            <a href="/delete/{{ employee.id }}">Delete</a>
-        </td>
-    </tr>
-{% endfor %}
-    </tbody>
+    <body>
+    {% for employee in employee %}
+                <tr>
+                    <td>{{ employee.eid }}</td>
+                    <td>{{ employee.ename }}</td>
+                    <td>{{ employee.eemail }}</td>
+                    <td>{{ employee.econtact }}</td>
+                    <!--<td>{{ employee.gender }}</td>-->
+                    <td>{{ employee.ecountry }}</td>
+                    <td>{{ employee.estate }}</td>
+                    <td>{{ employee.elanguage }}</td>
+
+                    <td>{{ employee.eimage }}</td>
+
+                    <td>
+                        <a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a>
+                        <a href="/delete/{{ employee.id }}">Delete</a>
+                    </td>
+                </tr>
+    {% endfor %}
+    </body>
 </table>
 <br>
 <br>
